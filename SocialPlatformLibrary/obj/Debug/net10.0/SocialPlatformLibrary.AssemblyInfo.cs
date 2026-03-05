@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SocialPlatformLibrary")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a4148204ebd7e4f1af00152afaefa2b9cfc59bc6")]
 [assembly: System.Reflection.AssemblyProductAttribute("SocialPlatformLibrary")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SocialPlatformLibrary")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
