@@ -48,15 +48,22 @@ public class Platform
         return post;
     }
 
-    /// <summary>Reel (видео) үүсгэнэ.</summary>
+    /// <summary>Reel үүсгэнэ.</summary>
     public Reel CreateReel(User author, string content, string videoUrl, TimeSpan duration)
     {
-        var reel = new Reel { Author = author, Content = content, Timestamp = DateTime.Now, VideoUrl = videoUrl, Duration = duration };
+        var reel = new Reel 
+        { 
+            Author = author,
+            Content = content,
+            Timestamp = DateTime.Now,
+            VideoUrl = videoUrl,
+            Duration = duration 
+        };
         _contents.Add(reel);
         return reel;
     }
 
-    /// <summary>Story үүсгэнэ (дуусаx хугацаатай).</summary>
+    /// <summary>Story үүсгэнэ .</summary>
     public Story CreateStory(User author, string content, TimeSpan visibleFor)
     {
         var story = new Story { Author = author, Content = content, Timestamp = DateTime.Now, ExpiresAt = DateTime.Now.Add(visibleFor) };
@@ -64,7 +71,7 @@ public class Platform
         return story;
     }
 
-    /// <summary>Контентыг id-ээр хайж реакци нэмж өгнө.</summary>
+    /// <summary>Контентыг id-ээр хайж reaction нэмж өгнө.</summary>
     public bool AddReaction(Guid contentId, User user, ReactionType reaction)
     {
         var c = _contents.FirstOrDefault(x => x.Id == contentId);
@@ -88,7 +95,7 @@ public class Platform
         return true;
     }
 
-    /// <summary>Feed-г товч хэвлэх demo.</summary>
+    /// <summary>Feed-г товч хэвлэх.</summary>
     public void PrintFeed()
     {
         Console.WriteLine($"--- {Name} feed ({_contents.Count} items) ---");

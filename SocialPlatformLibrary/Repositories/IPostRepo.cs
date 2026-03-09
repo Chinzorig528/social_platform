@@ -5,7 +5,7 @@ using SocialPlatformLibrary;
 namespace SocialPlatform.Repositories
 {
     /// <summary>
-    /// Постын репозиторийн интерфэйс (ерөнхий CRUD үйлдэл).
+    /// Постын репозиторийн интерфэйс.
     /// </summary>
     public interface IPostRepo
     {
